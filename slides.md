@@ -15,6 +15,9 @@ revealOptions:
 # Golang training
 
 {{./go-training/Session 1/PRESENTATION.md}}
+---
 {{./go-training/Session 2/PRESENTATION.md}}
+---
 {{./go-training/Session 3/PRESENTATION.md}}
+---
 {{./go-training/Session 4/PRESENTATION.md}}
