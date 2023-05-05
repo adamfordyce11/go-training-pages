@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>reveal-md deployed to gh-pages</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
     <link rel="stylesheet" href="./_assets/custom.css" />
 
   </head>
@@ -15,107 +18,427 @@
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template">
 
-# reveal-md & github-pages
+# Golang training
 
-</script></section><section  data-markdown><script type="text/template">
-## github-pages + reveal-md = awesome
+## Introduction to Go Programming
 
-* write your slides in markdown <!-- .element: class="fragment" data-fragment-index="0" -->
-* commit them to github <!-- .element: class="fragment" data-fragment-index="1" -->
-* get them automatically deployed <!-- .element: class="fragment" data-fragment-index=2" -->
+ - Module Title: Introduction to Go Programming
+ - Presenter's Name: Adam Fordyce
+ - Date: [Date]
 
-</script></section><section  data-markdown><script type="text/template">
-## get started
+---
+## Introduction
 
-* just press this nice & friendly green button
-![nice & friendly green button](img/1_pressButton.png)
+ - Welcome to the Introduction to Go Programming module!
+ - In this module, you will learn the basics of Go, how to set up the environment, and how to write your first Go program.
+ - Go is a powerful and versatile programming language that is 
+easy to learn and use. It is becoming increasingly popular in software development due to its speed, simplicity, and concurrency support.
 
-</script></section><section  data-markdown><script type="text/template">
-## get started
+---
+## Objectives
 
-* give your new repo a name
-* keep it public! (or git will deny to publish it)
+ - By the end of this module, you will be able to:
+   - Understand the basics of Go and its syntax.
+   - Set up your environment for Go development.
+   - Write a simple "Hello, World!" program in Go.
 
-</script></section><section  data-markdown><script type="text/template">
-## get started
+---
+## Resources
 
-* choose 'gh-pages' to be the public-branch
-![settings](img/2_settings.png)
+ - Here are some helpful resources to get started with Go:
+   - [Go installation guide](https://golang.org/doc/install)
+   - [Go tour](https://tour.golang.org/welcome/1)
 
-</script></section><section  data-markdown><script type="text/template">
-## get started
+---
+## What is Go?
 
-* choose 'gh-pages' to be the public-branch by:
-  * first switching to master
-  * and then switching back to gh-pages
-  * github-bug? ¯\\_(ツ)_/¯
+ - Go is an open-source programming language developed by Google in 2009.
+ - It is designed to be simple, fast, and efficient, with a focus on concurrency and scalability.
+ - Go is popular for building web applications, network servers, and other distributed systems.
 
-</script></section><section  data-markdown><script type="text/template">
-![settings](img/3_selectBranch.png)
+---
+## Go Syntax
 
-</script></section><section  data-markdown><script type="text/template">
-## writing content
+ - Go has a simple and concise syntax that makes it easy to read and write.
+ - Some key features of Go syntax include:
+   - Declaration of variables using the var keyword.
+   - Functions defined using the func keyword.
+   - Control flow statements like if, for, and switch.
 
-* edit the markdown-file `slides.md`
-* find all configurations on [reveal-md](https://github.com/gaerfield/reveal-md-github-pages)
+---
+## Go Environment
 
-</script></section><section  data-markdown><script type="text/template">
-## Customizations
+ - To develop Go programs, you will need to set up your environment with the following:
+   - Go compiler and tools
+   - Text editor or IDE
+   - You can download the latest version of Go from the official website: https://golang.org/dl/.
+   - Once you have downloaded and installed Go, you can use a text editor or IDE of your choice to write and edit Go programs.
 
-* I changed a whee-bit the defaults
+---
+## Writing Your First Go Program
 
-</script></section><section  data-markdown><script type="text/template">
-## Customizations - CSS
+ - Let's write our first Go program!
+ - Here's the code for a simple "Hello, World!" program:
 
-* custom.css has some additional configs (who needs borders around pictures)
-* just remove the content, if it not suits you
-* but keep the file, or the build will fail
+```go
+package main
 
-</script></section><section  data-markdown><script type="text/template">
-## Customizations - includes
+import "fmt"
 
-* the presentation is split up into multiple documents
-* useful for large presentations
-* an include is defined by
-
-   `{{path/to/include.md}}`
-
-</script></section><section  data-markdown><script type="text/template">
-## Customizations - plantuml
-
-* I really like diagrams
-````
-``` puml
-A -> B
+func main() {
+    fmt.Println("Hello, World!")
+}
 ```
-````
 
-will become
+ - Let's break down the code and explain each line.
 
-<img src='https://g.gravizo.com/svg?@startuml;A -> B;@enduml'/>
+---
+## Code Explanation
 
-</script></section><section  data-markdown><script type="text/template">
-## Customizations - plantuml
+ - `package main`: This line specifies that this file is part of the main package, which is the package that is executed when you run a Go program.
+ - `import "fmt"`: This line imports the fmt package, which contains functions for formatting and printing output.
+ - `func main() { ... }`: This is the main function of the program, which is the entry point for execution.
+ - `fmt.Println("Hello, World!")`: This line prints the string "Hello, World!" to the console using the Println function from the fmt package.
 
-* check [plantuml](https://plantuml.com/) for more details
-* or even better: [the hitchhikers guide to plantuml](https://crashedmind.github.io/PlantUMLHitchhikersGuide/)
+---
+## Running Your Program
 
-</script></section><section  data-markdown><script type="text/template">
-## Customizations
+ - Now that we've written our program, let's run it!
+ - Open a terminal or command prompt and navigate to the directory where your program is saved.
+ - Type go run [filename].go to run your program.
+ - You should see the output "Hello, World!" printed to the console.
 
-* included scripts are configured in includes.js
-* clear the content, if customizations not needed (but keep the file!)
-* never read the following files:
-  * `scripts/fileInclude.js`
-  * `scripts/pumlpreprocessor.js`
-* I know, they are open-source, but they are also crappy
-* Me not good is in javascript
+---
+## Exercise
 
-</script></section><section  data-markdown><script type="text/template">
+ - Now it's time to try it yourself!
+ - Write a "Hello, World!" program in Go and save it as a `.go` file.
 
-# The End
+ - Open a terminal or command prompt and navigate to the directory where the file is saved.
+ - Run the program using the go run command.
+ - Take a screenshot of the program running and share it with the instructor or the class.
 
-have fun ;)
+---
+## Conclusion
+
+ - Congratulations, you have completed the Introduction to Go Programming module!
+ - You should now have a basic understanding of Go, its syntax, and how to set up your environment.
+ - Keep practicing writing Go programs and exploring the language's features to continue building your skills.
+## Variables, Data Types, and Control Structures
+
+- Module Title: Variables, Data Types, and Control Structures
+- Presenter's Name: Adam Fordyce
+- Date: [Date]
+
+---
+## Objectives
+
+- By the end of this module, you will be able to:
+  - Understand variables and data types in Go.
+  - Explore control structures: if, for, switch, and defer.
+
+---
+## Resources
+
+- Here are some helpful resources for this module:
+  - [Go basics](https://gobyexample.com/variables)
+  - [Control structures](https://gobyexample.com/for)
+
+---
+## Variables
+
+- Variables are used to store values in a program.
+- In Go, variables can be declared using the `var` keyword, followed by the variable name, type, and optionally an initial value.
+- Variables can also be declared using the short assignment statement (`:=`) without specifying the type explicitly.
+
+```go
+var a int = 10
+var b = "hello"
+c := 3.14
+```
+
+---
+## Data Types
+ 
+- Go has several built-in data types, including:
+  - Numeric types (int, float32, float64)
+  - Boolean type (bool)
+  - String type (string)
+  - Derived types (arrays, slices, structs, maps)
+
+```go
+var integer int = 42
+var floatingPoint float64 = 3.14159
+var isTrue bool = true
+var text string = "Hello, Go!"
+```
+
+---
+## Control Structures: if
+- Go supports conditional statements with the if keyword.
+- The if statement is followed by a condition and a block of code to execute if the condition is true.
+
+```go
+if x > y {
+    fmt.Println("x is greater than y")
+} else if x < y {
+    fmt.Println("x is less than y")
+} else {
+    fmt.Println("x is equal to y")
+}
+```
+
+---
+## Control Structures: for
+
+- Go has only one looping construct: the for loop.
+- The for loop can be used with three components (initialization, condition, and post) or with a single condition as a while loop.
+
+```go
+for i := 0; i < 10; i++ {
+    fmt.Println(i)
+}
+
+for n < 100 {
+    n *= 2
+}
+```
+
+---
+## Control Structures: switch
+
+- The switch statement is used to execute different code blocks based on multiple conditions.
+- Cases are non-fallthrough by default, meaning they do not execute the subsequent case's code unless the fallthrough keyword is used.
+
+```go
+switch grade {
+case "A":
+    fmt.Println("Excellent!")
+case "B", "C":
+    fmt.Println("Good")
+case "D":
+    fmt.Println("Pass")
+default:
+    fmt.Println("Fail")
+}
+```
+
+---
+## Control Structures: defer
+
+- The defer keyword is used to ensure a function call is executed later in the program, usually for cleanup purposes.
+- Defer is often used to close files, network connections, or release resources.
+
+```go
+file, err := os.Open("file.txt")
+if err != nil {
+    log.Fatal(err)
+}
+defer file.Close()
+
+// Perform file operations here
+```
+
+
+---
+## Exercise
+
+- Write a program that calculates the factorial of a given number using a loop.
+
+> A factorial of a non-negative integer n, denoted as n!, is the product of all positive integers less than or equal to n. It is commonly used in mathematics, especially in combinatorics and probability theory.
+
+---
+## Conclusion
+
+- Congratulations, you have completed the "Variables, Data Types, and Control Structures" module!
+- You should now have a deeper understanding of variables, data types, and control structures in Go.
+- Keep practicing and experimenting with different Go programs to continue building your skills.
+
+
+## Functions and Methods
+
+- Module Title: Functions and Methods
+- Presenter's Name: Adam Fordyce
+- Date: [Date]
+
+---
+## Introduction
+
+- Welcome to the Functions and Methods module!
+- In this module, you will learn how to create functions and methods in Go.
+- Functions and methods are essential building blocks for modular and reusable code in Go.
+
+---
+## Objectives
+
+- By the end of this module, you will be able to:
+  - Understand functions and their syntax in Go.
+  - Create functions with multiple return values and variadic parameters.
+  - Learn how to create methods and work with receivers.
+
+---
+## Resources
+
+- Here are some helpful resources to get started with functions and methods in Go:
+  - [Functions](https://gobyexample.com/functions)
+  - [Methods](https://gobyexample.com/methods)
+
+---
+## Functions
+
+- Functions are defined using the `func` keyword.
+- Functions can have input parameters and return values.
+- Functions can return multiple values.
+- Functions can have variadic parameters, which accept a variable number of arguments.
+
+```go
+func add(a int, b int) int {
+    return a + b
+}
+```
+
+---
+## Multiple Return Values
+
+- Functions can return multiple values in Go.
+- This feature is useful for returning both a result and an error value.
+
+```go
+func divmod(a int, b int) (int, int) {
+    return a / b, a % b
+}
+```
+
+---
+## Variadic Parameters
+
+- Functions can accept a variable number of arguments using variadic parameters.
+- Variadic parameters are denoted by the `...` notation.
+
+```go
+func sum(nums ...int) int {
+    total := 0
+    for _, num := range nums {
+        total += num
+    }
+    return total
+}
+```
+
+---
+## Methods
+
+- Methods are functions that have a receiver.
+- Receivers are similar to `this` in other languages, and can be used to access fields or call other methods on the same object.
+
+```go
+type Rectangle struct {
+    width  float64
+    height float64
+}
+
+func (r Rectangle) area() float64 {
+    return r.width * r.height
+}
+```
+
+---
+## Exercise
+
+- Write a program that calculates the area and perimeter of a rectangle using functions and methods.
+
+> `Perimeter = 2 * (width + height)`
+
+---
+## Conclusion
+
+- Congratulations, you have completed the Functions and Methods module!
+- You should now have a good understanding of functions, methods, and their syntax in Go.
+- Keep practicing writing functions and methods to continue building your skills in Go programming.
+
+## Working with Packages and Imports
+
+- Module Title: Working with Packages and Imports
+- Presenter's Name: Adam Fordyce
+- Date: [Date]
+
+---
+## Introduction
+
+- Welcome to the Working with Packages and Imports module!
+- In this module, you will learn how to create and use packages in Go.
+- Packages are an essential part of organizing and reusing code in Go projects.
+
+---
+## Objectives
+
+- By the end of this module, you will be able to:
+  - Understand packages and imports in Go.
+  - Create and use custom packages.
+  - Organize your code effectively using packages.
+
+---
+## Resources
+
+- Here are some helpful resources to get started with packages and imports in Go:
+  - [Packages and Imports](https://golang.org/doc/code.html#Organization)
+  - [Go by Example: Packages](https://gobyexample.com/packages)
+
+---
+## Packages
+
+- Packages are a way to group related Go code together.
+- Packages provide code organization and enable code reuse.
+- A package is a directory containing `.go` source files.
+- The package name is the same as the directory name.
+
+---
+## Imports
+
+- To use a package, you need to import it in your Go source files.
+- Use the `import` keyword to include a package.
+- Go's standard library has many built-in packages, like `fmt`, `math`, and `os`.
+
+```go
+import "fmt"
+import "math"
+```
+
+---
+## Custom Packages
+
+- You can create your own custom packages.
+- Organize your code into directories, with each directory representing a package.
+- Use the package name in your import statements to include your custom package.
+
+```go
+mypackage/
+    mypackage.go
+main.go
+```
+Then...
+```go
+import "mypackage"
+```
+
+---
+## Exercise
+
+
+- Create a package with functions for basic arithmetic operations:
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division
+- Use the package in a main program to perform these operations on user-provided input.
+
+
+---
+## Conclusion
+
+- Congratulations, you have completed the Working with Packages and Imports module!
+- You should now have a good understanding of packages, imports, and how to create and use custom packages in Go.
+- Keep practicing creating and using packages to improve your Go programming skills.
 
 </script></section></div>
     </div>
@@ -148,6 +471,7 @@ have fun ;)
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
         plugins: [
           RevealMarkdown,
           RevealHighlight,
