@@ -12,8 +12,9 @@ revealOptions:
   backgroundTransition: 'fade'
 ---
 
-# reveal-md & github-pages
+# Golang training
 
-{{1_getStarted.md}}
-{{2_writing.md}}
-{{3_extras.md}}
+{{./go-training/Session%201/PRESENTATION.md}}
+{{./go-training/Session%202/PRESENTATION.md}}
+{{./go-training/Session%203/PRESENTATION.md}}
+{{./go-training/Session%204/PRESENTATION.md}}
