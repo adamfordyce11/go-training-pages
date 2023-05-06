@@ -1,12 +1,11 @@
 name: 'Submodules Sync'
-
 on:
-  # Allows you to run this workflow manually from the Actions tab or through HTTP API
   workflow_dispatch:
+  push:
+    branches: [master]
 
 jobs:
   sync:
-    name: 'Submodules Sync'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
